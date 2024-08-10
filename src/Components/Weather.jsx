@@ -54,7 +54,7 @@ const Weather = () => {
   };
 
   useEffect(() => {
-    search('Punjab');
+    search('Odisha');
   }, []);
 
   const handleSearch = (e) => {
