@@ -3,7 +3,7 @@ from jinja2 import Environment, FileSystemLoader
 import os
 
 # Define the path to the manifest directory
-env = Environment(loader=FileSystemLoader(searchpath="/mainfest"))
+env = Environment(loader=FileSystemLoader(searchpath="./"))
 template = env.get_template("deploy.yaml.j2")
 
 # Load the template file from the manifest directory
