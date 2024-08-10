@@ -3,7 +3,7 @@ import os
 
 # Load the template file
 env = Environment(loader=FileSystemLoader(searchpath="./"))
-template = env.get_template("deployment.yaml.j2")
+template = env.get_template("mainfest/deploy.yaml.j2")
 
 # Define variables to replace in the template
 variables = {
@@ -14,5 +14,5 @@ variables = {
 rendered_template = template.render(variables)
 
 # Save the rendered template to a file
-with open("deployment.yaml", "w") as f:
+with open("mainfest/deploy.yaml", "w") as f:
     f.write(rendered_template)
