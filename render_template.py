@@ -2,8 +2,8 @@ from jinja2 import Environment, FileSystemLoader
 import os
 
 # Load the template file
-env = Environment(loader=FileSystemLoader(searchpath="./"))
-template = env.get_template("mainfest/deploy.yaml.j2")
+env = Environment(loader=FileSystemLoader(searchpath="./manifest"))
+template = env.get_template("deploy.yaml.j2")
 
 # Define variables to replace in the template
 variables = {
