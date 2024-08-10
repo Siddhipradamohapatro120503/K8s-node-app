@@ -34,7 +34,7 @@ jobs:
         push: true
         tags: |
           IMAGE_TAG=${{ github.sha }}
-          siddhi2003/weather-app-2:$IMAGE_TAG
+          siddhi2003/weather-app-2:${{ env.IMAGE_TAG }}
           echo "IMAGE_TAG=$IMAGE_TAG" >> $GITHUB_ENV
 
     - name: Log out from Docker Hub
