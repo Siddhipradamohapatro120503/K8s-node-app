@@ -6,9 +6,7 @@ import os
 env = Environment(loader=FileSystemLoader(searchpath="./"))
 template = env.get_template("deploy.yaml.j2")
 
-# Load the template file from the manifest directory
-env = Environment(loader=FileSystemLoader(searchpath=manifest_path))
-template = env.get_template("deploy.yaml.j2")
+
 
 # Define variables to replace in the template
 variables = {
