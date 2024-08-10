@@ -54,7 +54,7 @@ const Weather = () => {
   };
 
   useEffect(() => {
-    search('GOA');
+    search('Odisha');
   }, []);
 
   const handleSearch = (e) => {
@@ -85,7 +85,7 @@ const Weather = () => {
               <img src={humidity_icon} alt="humidity icon" />
               <div>
                 <p>{weatherData.humidity} %</p>
-                <span>Humidity-sid-preteem</span>
+                <span>Humidity</span>
               </div>
             </div>
             <div className="col">
