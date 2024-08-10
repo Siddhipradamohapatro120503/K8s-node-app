@@ -17,5 +17,5 @@ variables = {
 rendered_template = template.render(variables)
 
 # Save the rendered template to a file in the manifest directory
-with open("manifest/deploy.yaml", "w") as f:
+with open("./manifest/deploy.yaml", "w") as f:
     f.write(rendered_template)
