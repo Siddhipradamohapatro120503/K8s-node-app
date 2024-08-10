@@ -33,7 +33,7 @@ jobs:
         file: ./Dockerfile  # Update this if your Dockerfile is in a different location
         push: true
         tags: |
-          siddhi2003/weather-app-2:latest
+          siddhi2003/weather-app-2:v1
 
     - name: Log out from Docker Hub
       run: docker logout
