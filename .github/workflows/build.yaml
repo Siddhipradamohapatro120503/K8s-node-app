@@ -26,6 +26,9 @@ jobs:
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
 
+    - name: Set IMAGE_TAG
+      run: echo "IMAGE_TAG=${{ github.sha }}" >> $GITHUB_ENV
+
     - name: Build and push
       uses: docker/build-push-action@v5
       with:
@@ -33,9 +36,7 @@ jobs:
         file: ./Dockerfile  # Update this if your Dockerfile is in a different location
         push: true
         tags: |
-          IMAGE_TAG=${{ github.sha }}
           siddhi2003/weather-app-2:${{ env.IMAGE_TAG }}
-          echo "IMAGE_TAG=$IMAGE_TAG" >> $GITHUB_ENV
 
     - name: Log out from Docker Hub
       run: docker logout
