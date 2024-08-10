@@ -14,9 +14,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Set up environment
-      run: echo "API_KEY=${{ secrets.API_KEY }}" >> $GITHUB_ENV
-
     - name: Log in to Docker Hub
       uses: docker/login-action@v2
       with:
