@@ -1,8 +1,12 @@
+
 from jinja2 import Environment, FileSystemLoader
 import os
 
-# Load the template file
-env = Environment(loader=FileSystemLoader(searchpath="./manifest"))
+# Define the path to the manifest directory
+manifest_path = os.path.join(os.getcwd(), "manifest")
+
+# Load the template file from the manifest directory
+env = Environment(loader=FileSystemLoader(searchpath=manifest_path))
 template = env.get_template("deploy.yaml.j2")
 
 # Define variables to replace in the template
@@ -13,6 +17,6 @@ variables = {
 # Render the template with variables
 rendered_template = template.render(variables)
 
-# Save the rendered template to a file
-with open("mainfest/deploy.yaml", "w") as f:
+# Save the rendered template to a file in the manifest directory
+with open(os.path.join(manifest_path, "deploy.yaml"), "w") as f:
     f.write(rendered_template)
