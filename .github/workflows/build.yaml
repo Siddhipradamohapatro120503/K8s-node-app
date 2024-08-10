@@ -26,8 +26,18 @@ jobs:
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
 
-    - name: Set IMAGE_TAG
-      run: echo "IMAGE_TAG=${{ github.sha }}" >> $GITHUB_ENV
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install Jinja2
+      run: pip install jinja2
+
+    - name: Render Kubernetes manifest from Jinja template
+      run: python render_template.py
+      env:
+       IMAGE_TAG: ${{ github.sha }}
 
     - name: Build and push
       uses: docker/build-push-action@v5
@@ -36,7 +46,7 @@ jobs:
         file: ./Dockerfile  # Update this if your Dockerfile is in a different location
         push: true
         tags: |
-          siddhi2003/weather-app-2:${{ env.IMAGE_TAG }}
+          siddhi2003/weather-app-2:${{ github.sha }}
 
     - name: Log out from Docker Hub
       run: docker logout
