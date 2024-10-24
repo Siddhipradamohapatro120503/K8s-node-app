@@ -54,7 +54,7 @@ const Weather = () => {
   };
 
   useEffect(() => {
-    search('odisha');
+    search('Delhi');
   }, []);
 
   const handleSearch = (e) => {
