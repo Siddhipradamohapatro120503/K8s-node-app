@@ -14,7 +14,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: siddhi2003/weather-app-2:62a2a45e923e2d513cac30ab83fa3612fd4a0cbe
+        image: siddhi2003/weather-app-2:430f1aaee4137346b17828e977a3839af360ae2d
         imagePullPolicy: Always
         ports:
         - containerPort: 5173
