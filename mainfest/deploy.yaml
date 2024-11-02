@@ -14,7 +14,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: siddhi2003/weather-app-2:430f1aaee4137346b17828e977a3839af360ae2d
+        image: siddhi2003/weather-app-2:496327ff1c82ba8455b5aa869fd1f236b558e1f3
         imagePullPolicy: Always
         ports:
         - containerPort: 5173
@@ -34,4 +34,4 @@ spec:
     port: 80
     protocol: TCP
     targetPort: 5173
-  type: NodePort
+  type: LoadBalancer
