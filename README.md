@@ -1,6 +1,6 @@
 # WorkFlow
 
-![Alt text](Screenshot 2024-11-09 122417.png)
+![Alt text](https://github.com/Siddhipradamohapatro120503/K8s-node-app/blob/main/Screenshot%202024-11-09%20122417.png)
 
 # React + Vite
 
