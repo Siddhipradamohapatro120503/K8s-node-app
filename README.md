@@ -1,13 +1,85 @@
-# WorkFlow
+# Modern CI/CD Pipeline with GitOps
 
-![Alt text](https://github.com/Siddhipradamohapatro120503/K8s-node-app/blob/main/Screenshot%202024-11-09%20122417.png)
+## Overview
+Our project implements a fully automated CI/CD pipeline utilizing modern DevOps practices and GitOps principles for reliable, secure, and efficient software delivery.
 
-# React + Vite
+![CI/CD Pipeline Architecture](https://github.com/Siddhipradamohapatro120503/K8s-node-app/blob/main/Screenshot%202024-11-09%20122417.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Pipeline Components
 
-Currently, two official plugins are available:
+### 💻 Development
+- **Developer Push**: Code changes via Git
+- **GitHub Repo**: Central code repository
+ - Version control
+ - Code review process
+ - Branch protection
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-"# Weather-App" 
+### 🔄 CI Pipeline (GitHub Actions) 
+1. **Build and Test**
+  - Automated unit tests
+  - Integration testing
+  - Code quality checks
+
+2. **Docker Build**
+  - Container image creation
+  - Multi-stage builds
+  - Optimization for production
+
+3. **Push to Docker Hub**
+  - Versioned images
+  - Central container registry
+  - Image scanning
+
+4. **Update K8s Manifests**
+  - Infrastructure as Code
+  - Version-controlled configs
+  - Automated updates
+
+### 🚀 CD Pipeline (Argo CD)
+1. **Detect Changes**
+  - Git repository monitoring
+  - Configuration drift detection
+  - Automated syncs
+
+2. **Apply to Cluster**
+  - Automated deployments
+  - Rolling updates
+  - Zero-downtime releases
+
+3. **Sync Status**
+  - Real-time monitoring
+  - Health checks
+  - Automatic rollbacks
+
+### ⚙️ Infrastructure
+- **Kubernetes Cluster**
+ - Container orchestration
+ - Auto-scaling
+ - High availability
+
+## Key Features
+
+### Automation
+- Continuous Integration
+- Automated testing
+- Automated deployments
+- Reduced manual intervention
+
+### Security
+- Container scanning
+- Code analysis
+- Secrets management
+- RBAC implementation
+
+### Scalability
+- Containerized applications
+- Kubernetes orchestration
+- Infrastructure as Code
+- Horizontal scaling
+
+### Monitoring
+- Pipeline metrics
+- Deployment tracking
+- Infrastructure health
+- Application logging
+
